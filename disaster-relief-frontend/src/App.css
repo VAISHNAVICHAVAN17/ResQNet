@@ -1,0 +1,105 @@
+button {
+  background-color: #0077b6;
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 8px 20px;
+  border: none;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover, button:focus {
+  background-color: #023e8a;
+  outline: none;
+}
+input, select, textarea {
+  margin: 8px 0;
+  padding: 8px;
+  width: 94%;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+.nav-link-btn {
+  min-width: 120px;
+  text-align: center;
+  color: white !important;
+  text-decoration: none;
+  padding: 8px 0;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 4px;
+  display: inline-block;
+  background: none;
+  border: none;
+}
+.nav-link-btn:hover,
+.nav-link-btn:focus {
+  background: rgba(255,255,255,.13);
+  color: #d9f1ff !important;
+  text-decoration: none;
+}
+.logout-btn {
+  background-color: #fff !important;
+  color: #0077b6 !important;
+  border: 2px solid #0077b6 !important;
+  font-weight: bold !important;
+  padding: 8px 28px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(36,87,182,0.08);
+  transition: background .15s, color .15s, border .16s;
+}
+.logout-btn:hover,
+.logout-btn:focus {
+  background-color: #0077b6 !important;
+  color: #fff !important;
+  border-color: #004678 !important;
+  box-shadow: 0 4px 18px rgba(36,87,182,0.13);
+}
+.outer-btn {
+  background-color: #fff !important;
+  color: #0077b6 !important;
+  border: 2px solid #0077b6 !important;
+  font-weight: bold !important;
+  padding: 8px 28px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(36,87,182,0.08);
+  margin-left: 12px !important;
+  font-size: 18px !important;
+  letter-spacing: 0.02em;
+  transition: background .15s, color .15s, border .14s;
+  text-align: center;
+  min-width: 120px;
+  display: inline-block;
+}
+.outer-btn:hover,
+.outer-btn:focus {
+  background-color: #0077b6 !important;
+  color: #fff !important;
+  border-color: #004678 !important;
+  box-shadow: 0 4px 18px rgba(36,87,182,0.13);
+  text-decoration: none;
+}
+.action-btn-approve {
+  background: #41d671;
+  color: #fff;
+  border: none;
+  border-radius: 13px;
+  padding: 5px 17px;
+  font-weight: 600;
+  margin-right: 4px;
+}
+.action-btn-approve:disabled {
+  opacity: 0.6;
+}
+.action-btn-reject {
+  background: #ee554c;
+  color: #fff;
+  border: none;
+  border-radius: 13px;
+  padding: 5px 17px;
+  font-weight: 600;
+}
+.action-btn-reject:disabled {
+  opacity: 0.6;
+}

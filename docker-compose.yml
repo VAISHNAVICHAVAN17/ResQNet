@@ -1,0 +1,34 @@
+version: '3'
+services:
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: disaster_relief
+      MYSQL_ROOT_PASSWORD: Chiu@172
+    ports:
+      - "4306:3306"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+
+  backend:
+    build: .
+    ports:
+      - "8088:8088"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/disaster_relief
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: Chiu@172
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build: ./disaster-relief-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
